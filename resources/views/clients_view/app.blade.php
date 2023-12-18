@@ -10,5 +10,10 @@
 </head>
 <body>
 
+    <div class="container">
+        <h1 class="mt-5">Gestionnaire de Clients</h1>
+        @yield('content')
+    </div>
+
 </body>
 </html>
