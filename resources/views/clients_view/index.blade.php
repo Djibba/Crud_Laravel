@@ -1,6 +1,9 @@
 @extends('clients_view.app')
 
 @section('content')
+
+    <a href="#" class="btn btn-primary mt-4 mb-4">Ajouter un client</a>
+
     <table class="table">
         <thead>
             <tr>
