@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <a href="#" class="btn btn-primary mt-4 mb-4">Ajouter un client</a>
+    <a href="{{ route('createClient') }}" class="btn btn-primary mt-4 mb-4">Ajouter un client</a>
 
     <table class="table">
         <thead>

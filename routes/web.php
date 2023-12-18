@@ -15,3 +15,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [ClientController::class, 'index'])-> name('index');
+Route::get('/create', [ClientController::class, 'create'])-> name('createClient');
