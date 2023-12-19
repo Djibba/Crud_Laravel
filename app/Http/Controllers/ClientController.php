@@ -68,4 +68,11 @@ class ClientController extends Controller
 
         return redirect()->route('index')->with('success', 'Client updated successfully!');
     }
+
+    public function delete($id)
+    {
+        $client = Client::where('id', $id)->first();
+        $client->delete();
+        return redirect()->route('index')->with('success', 'Client deleted successfully!');
+    }
 }

@@ -33,7 +33,11 @@
                     </td>
                     <td>
                         <a href="{{ route('updateClient', $client->id) }}" class="btn btn-sm btn-primary">Modifier</a>
-                        <a href="#" class="btn btn-sm btn-danger">Supprimer</a>
+                        <form action="{{ route('deleteClient', $client->id) }}" method="post" style="display: inline;">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Etes vous sur de vouloir supprimer le client ?')">Supprimer</button>
+                        </form>
                 </tr>
             @endforeach
 
