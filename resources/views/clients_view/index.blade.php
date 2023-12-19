@@ -32,7 +32,7 @@
                         @endif
                     </td>
                     <td>
-                        <a href="#" class="btn btn-sm btn-primary">Modifier</a>
+                        <a href="{{ route('updateClient', $client->id) }}" class="btn btn-sm btn-primary">Modifier</a>
                         <a href="#" class="btn btn-sm btn-danger">Supprimer</a>
                 </tr>
             @endforeach
