@@ -3,7 +3,7 @@
 @section('content')
     <h2>Modification des données du client</h2>
 
-    <form action="{{ route('storeUpdateClient', $client->id) }}" method="post">
+    <form action="{{ route('clients.update', $client->id) }}" method="post">
         @csrf
 
         @if (!empty($client))

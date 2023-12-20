@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ClientController;
+use App\Http\Controllers\ClientPipoController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,8 +16,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [ClientController::class, 'index'])-> name('index');
-Route::get('/create', [ClientController::class, 'create'])-> name('createClient');
-Route::post('/store', [ClientController::class, 'store'])-> name('storeClient');
-Route::get('/update/{id}', [ClientController::class, 'update'])-> name('updateClient');
-Route::put('/storeUpdate/{id}', [ClientController::class, 'storeUpdate'])-> name('storeUpdateClient');
-Route::delete('/delete/{id}', [ClientController::class, 'delete'])-> name('deleteClient');
+
+Route::resource('clients', ClientPipoController::class);
+
+// Route::get('/create', [ClientController::class, 'create'])-> name('createClient');
+// Route::post('/store', [ClientController::class, 'store'])-> name('storeClient');
+// Route::get('/update/{id}', [ClientController::class, 'update'])-> name('updateClient');
+// Route::put('/storeUpdate/{id}', [ClientController::class, 'storeUpdate'])-> name('storeUpdateClient');
+// Route::delete('/delete/{id}', [ClientController::class, 'delete'])-> name('deleteClient');

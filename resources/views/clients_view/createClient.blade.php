@@ -3,7 +3,7 @@
 @section('content')
     <h2>Creation du client</h2>
 
-    <form action="{{ route('storeClient') }}" method="post">
+    <form action="{{ route('clients.store') }}" method="post">
         @csrf
         <div class="mb-3">
             <label for="fullName" class="form-label">Prenom et Nom</label>

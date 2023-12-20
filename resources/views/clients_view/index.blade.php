@@ -1,7 +1,7 @@
 @extends('clients_view.app')
 
 @section('content')
-    <a href="{{ route('createClient') }}" class="btn btn-primary mt-4 mb-4">Ajouter un client</a>
+    <a href="{{ route('clients.create') }}" class="btn btn-primary mt-4 mb-4">Ajouter un client</a>
 
     <table class="table">
         <thead>
@@ -32,8 +32,8 @@
                         @endif
                     </td>
                     <td>
-                        <a href="{{ route('updateClient', $client->id) }}" class="btn btn-sm btn-primary">Modifier</a>
-                        <form action="{{ route('deleteClient', $client->id) }}" method="post" style="display: inline;">
+                        <a href="{{ route('clients.edit', $client->id) }}" class="btn btn-sm btn-primary">Modifier</a>
+                        <form action="{{ route('clients.destroy', $client->id) }}" method="post" style="display: inline;">
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Etes vous sur de vouloir supprimer le client ?')">Supprimer</button>
