@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\ClientPipoController;
 use Illuminate\Support\Facades\Route;
@@ -18,6 +19,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [ClientController::class, 'index'])-> name('index');
 
 Route::resource('clients', ClientPipoController::class);
+
+Route::get('/login', [AuthController::class, 'index'])-> name('login.index');
 
 // Route::get('/create', [ClientController::class, 'create'])-> name('createClient');
 // Route::post('/store', [ClientController::class, 'store'])-> name('storeClient');
