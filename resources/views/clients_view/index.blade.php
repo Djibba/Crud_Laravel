@@ -3,6 +3,13 @@
 @section('content')
     <a href="{{ route('clients.create') }}" class="btn btn-primary mt-4 mb-4">Ajouter un client</a>
 
+    @if (session('success'))
+        <div class="alert alert-success">
+            {{ session('success') }}
+        </div>
+
+    @endif
+
     <table class="table">
         <thead>
             <tr>
