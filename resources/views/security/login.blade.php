@@ -20,7 +20,16 @@
 
             <h1 class="text-center">Se Connecter</h1>
 
-            <form>
+            @if (session('error'))
+
+                <div class="alert alert-danger">
+                    {{ session('error') }}
+                </div>
+
+            @endif
+
+            <form action="{{ route('login') }}" method="post">
+                @csrf
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Email</label>
                     <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">

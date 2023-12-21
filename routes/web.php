@@ -22,6 +22,8 @@ Route::resource('clients', ClientPipoController::class);
 
 Route::get('/login', [AuthController::class, 'index'])-> name('login.index');
 
+Route::post('/login', [AuthController::class, 'login'])-> name('login');
+
 // Route::get('/create', [ClientController::class, 'create'])-> name('createClient');
 // Route::post('/store', [ClientController::class, 'store'])-> name('storeClient');
 // Route::get('/update/{id}', [ClientController::class, 'update'])-> name('updateClient');
