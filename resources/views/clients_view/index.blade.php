@@ -2,6 +2,7 @@
 
 @section('content')
     <a href="{{ route('clients.create') }}" class="btn btn-primary mt-4 mb-4">Ajouter un client</a>
+    <a href="{{ route('logout') }}" class="btn btn-primary ml-4">Se deconnecter</a>
 
     @if (session('success'))
         <div class="alert alert-success">

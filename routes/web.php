@@ -16,13 +16,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [ClientController::class, 'index'])-> name('index');
+Route::get('/', [ClientController::class, 'index'])-> name('index')->middleware('auth');
 
 Route::resource('clients', ClientPipoController::class);
 
-Route::get('/login', [AuthController::class, 'index'])-> name('login.index');
-
-Route::post('/login', [AuthController::class, 'login'])-> name('login');
+Route::get('/login', [AuthController::class, 'index'])-> name('login');
+Route::post('/login', [AuthController::class, 'login'])-> name('login.post');
+Route::get('/logout', [AuthController::class, 'logout'])-> name('logout');
 
 // Route::get('/create', [ClientController::class, 'create'])-> name('createClient');
 // Route::post('/store', [ClientController::class, 'store'])-> name('storeClient');
